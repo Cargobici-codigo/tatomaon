@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ruta_envio,ruta.envio,model_ruta_envio,,1,1,1,1
+access_ruta_punto,ruta.punto,model_ruta_punto,,1,1,1,1
