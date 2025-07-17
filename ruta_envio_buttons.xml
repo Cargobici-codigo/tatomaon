@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Botón Planificación Automática en Ruta Envío -->
+    <record id="view_ruta_envio_form_inherit" model="ir.ui.view">
+        <field name="name">ruta.envio.form.buttons</field>
+        <field name="model">ruta.envio</field>
+        <field name="inherit_id" ref="tatoma_ruta_logistica.view_ruta_envio_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="agrupar_entregas_por_peso_y_horario"
+                        type="object"
+                        string="Planificar rutas automáticamente"
+                        class="oe_highlight"
+                        help="Agrupa automáticamente los puntos de entrega en rutas óptimas considerando peso y prioridad."/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

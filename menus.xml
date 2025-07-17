@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Menús principales del módulo -->
+    <menuitem id="menu_ruta_root" name="Rutas Logísticas" sequence="10"/>
+
+    <menuitem id="menu_manual_routing"
+              name="Crear Ruta Manual"
+              parent="menu_ruta_root"
+              action="action_manual_routing_wizard"
+              sequence="10"/>
+
+    <menuitem id="menu_ruta_punto_map_selector"
+              name="Seleccionar en Mapa"
+              parent="menu_ruta_root"
+              action="action_ruta_punto_map_select"
+              sequence="20"/>
+
+    <menuitem id="menu_ruta_punto_kanban_view"
+              name="Visualizar por Estado"
+              parent="menu_ruta_root"
+              action="action_ruta_punto_kanban_view"
+              sequence="30"/>
+
+    <menuitem id="menu_reprogramar_incidencias"
+              name="Reprogramar Incidencias"
+              parent="menu_ruta_root"
+              action="action_wizard_reprogramacion"
+              sequence="50"/>
+</odoo>

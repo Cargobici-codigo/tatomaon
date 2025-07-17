@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Wizard Reprogramación de Incidencias optimizado -->
+    <record id="view_wizard_reprogramacion_form" model="ir.ui.view">
+        <field name="name">wizard.reprogramacion.incidencias.form</field>
+        <field name="model">wizard.reprogramacion.incidencias</field>
+        <field name="arch" type="xml">
+            <form string="Reprogramar puntos con incidencia">
+                <group>
+                    <field name="fecha_reintento" help="Fecha propuesta para reintentar los puntos fallidos."/>
+                    <field name="transportista_id" help="Reasignar a un repartidor específico (opcional)."/>
+                    <field name="punto_ids" widget="many2many_tags" domain="[('estado','=','fallido')]" help="Seleccione puntos fallidos para reprogramar."/>
+                </group>
+                <footer>
+                    <button name="action_reprogramar" type="object" class="btn-primary" string="Reprogramar"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_reprogramacion" model="ir.actions.act_window">
+        <field name="name">Reprogramar Incidencias</field>
+        <field name="res_model">wizard.reprogramacion.incidencias</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
