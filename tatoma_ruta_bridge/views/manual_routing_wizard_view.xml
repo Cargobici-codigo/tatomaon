@@ -1,1 +1,25 @@
-<odoo/>
+<odoo>
+    <record id="view_manual_routing_wizard" model="ir.ui.view">
+        <field name="name">manual.routing.wizard.form</field>
+        <field name="model">manual.routing.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Manual Planning">
+                <group>
+                    <field name="name"/>
+                    <field name="fecha"/>
+                    <field name="punto_ids" widget="many2many_tags"/>
+                </group>
+                <footer>
+                    <button string="Create Route" type="object" name="action_crear_ruta" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_manual_routing_wizard"
+                name="Manual Planning"
+                res_model="manual.routing.wizard"
+                view_mode="form"
+                target="new"/>
+</odoo>

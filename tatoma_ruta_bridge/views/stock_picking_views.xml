@@ -1,1 +1,12 @@
-<odoo/>
+<odoo>
+    <record id="view_stock_picking_form_bridge" model="ir.ui.view">
+        <field name="name">stock.picking.form.bridge</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//field[@name='partner_id']" position="after">
+                <field name="ruta_punto_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

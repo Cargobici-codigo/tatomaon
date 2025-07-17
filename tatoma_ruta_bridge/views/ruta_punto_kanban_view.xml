@@ -1,1 +1,12 @@
-<odoo/>
+<odoo>
+    <record id="view_ruta_punto_kanban" model="ir.ui.view">
+        <field name="name">ruta.punto.kanban</field>
+        <field name="model">ruta.punto</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="direccion"/>
+                <field name="estado"/>
+            </kanban>
+        </field>
+    </record>
+</odoo>

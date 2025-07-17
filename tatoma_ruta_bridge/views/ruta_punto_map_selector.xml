@@ -1,1 +1,13 @@
-<odoo/>
+<odoo>
+    <record id="view_ruta_punto_map" model="ir.ui.view">
+        <field name="name">ruta.punto.map.selector</field>
+        <field name="model">ruta.punto</field>
+        <field name="arch" type="xml">
+            <form string="Map Selector">
+                <field name="direccion"/>
+                <field name="latitud"/>
+                <field name="longitud"/>
+            </form>
+        </field>
+    </record>
+</odoo>

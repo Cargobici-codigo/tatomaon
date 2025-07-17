@@ -1,1 +1,12 @@
-<odoo/>
+<odoo>
+    <record id="view_pos_order_form_bridge" model="ir.ui.view">
+        <field name="name">pos.order.form.bridge</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="ruta_envio_id"/>
+            </field>
+        </field>
+    </record>
+</odoo>

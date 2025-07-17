@@ -1,1 +1,25 @@
-<odoo/>
+<odoo>
+    <record id="view_wizard_reprogramacion_incidencias" model="ir.ui.view">
+        <field name="name">wizard.reprogramacion.incidencias.form</field>
+        <field name="model">wizard.reprogramacion.incidencias</field>
+        <field name="arch" type="xml">
+            <form string="Reprogram Incidences">
+                <group>
+                    <field name="fecha_reintento"/>
+                    <field name="transportista_id"/>
+                    <field name="punto_ids" widget="many2many_tags"/>
+                </group>
+                <footer>
+                    <button string="Reprogram" type="object" name="action_reprogramar" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_wizard_reprogramar_incidencias"
+                name="Reprogram Incidences"
+                res_model="wizard.reprogramacion.incidencias"
+                view_mode="form"
+                target="new"/>
+</odoo>

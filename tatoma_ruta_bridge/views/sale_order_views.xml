@@ -1,1 +1,14 @@
-<odoo/>
+<odoo>
+    <record id="view_sale_order_form_bridge" model="ir.ui.view">
+        <field name="name">sale.order.form.bridge</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook/page[@name='delivery']" position="inside">
+                <group>
+                    <field name="ruta_envio_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

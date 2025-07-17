@@ -1,1 +1,10 @@
-<odoo/>
+<odoo>
+    <record id="action_ruta_envio" model="ir.actions.act_window">
+        <field name="name">Routes</field>
+        <field name="res_model">ruta.envio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_rutas_root" name="Routes"/>
+    <menuitem id="menu_rutas_envios" parent="menu_rutas_root" action="action_ruta_envio" name="Delivery Routes"/>
+</odoo>

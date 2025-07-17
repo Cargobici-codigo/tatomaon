@@ -1,1 +1,15 @@
-<odoo/>
+<odoo>
+    <record id="view_ruta_punto_tree" model="ir.ui.view">
+        <field name="name">ruta.punto.tree</field>
+        <field name="model">ruta.punto</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="direccion"/>
+                <field name="tipo"/>
+                <field name="estado"/>
+                <field name="peso_kg"/>
+                <field name="orden"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
