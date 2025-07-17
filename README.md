@@ -26,3 +26,5 @@ Install the following Odoo modules before adding the bridge:
 ## Usage and verification
 
 After installation a new **Routes** menu appears. Confirming a Sale Order or POS Order will automatically create a shipping route with the required delivery points. Open the route record to check the generated stops and use the provided wizards to plan or reprogram deliveries.
+
+All module code is located under the `tatoma_ruta_bridge` directory.
