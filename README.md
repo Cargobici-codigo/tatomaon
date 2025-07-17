@@ -263,3 +263,8 @@ default_get(self,fields):
         for i,p in enumerate(self.punto_ids,1): p.write({'ruta_id':nr.id,'estado':'reprogramado','reintento_fecha':self.fecha_reintento,'orden':i,'incidencia':(p.incidencia or '')+' | Reprog'})
         return {'type':'ir.actions.client','tag':'display_notification','params':{'title':'Reprog','message':f'{len(self.punto_ids)} puntos'}}
 ```
+
+## License
+
+This project is released under the GNU General Public License v3.0.
+See the [LICENSE](LICENSE) file for the full license text.
